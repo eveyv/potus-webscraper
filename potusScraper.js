@@ -5,9 +5,8 @@ const url = 'https://en.wikipedia.org/wiki/List_of_Presidents_of_the_United_Stat
 
 rp(url)
   .then(function(html) {
-    //success!
     const wikiUrls = [];
-    for (let i = 0; i < 45; i++) {
+    for (let i = 0; i < 53; i++) {
       wikiUrls.push($('b > a', html)[i].attribs.href);
     }
     return Promise.all(
